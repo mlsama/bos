@@ -1,0 +1,48 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+.idea/
+/bos-main/.project
+/bos-main/.settings/
+/bos-main/bos-dao/.settings/
+/bos-main/bos-dao/.project
+/bos-main/bos-dao/.classpath
+/bos-main/bos-dao/target/
+/bos-main/bos-domain/target/
+/bos-main/bos-domain/.project
+/bos-main/bos-domain/.settings/
+/bos-main/bos-domain/.classpath
+/bos-main/bos-service/.project
+/bos-main/bos-service/.settings/
+/bos-main/bos-service/.classpath
+/bos-main/bos-service/target/
+/bos-main/bos-web/.classpath
+/bos-main/bos-web/.project
+/bos-main/bos-web/.settings/
+/bos-main/bos-web/target/
+/bos_fore/.settings/
+/bos_fore/target/
+/bos_fore/.classpath
+/bos_fore/.project
+/crm-main/.project
+/crm-main/.settings/
+/crm-main/crm-domain/.classpath
+/crm-main/crm-domain/.project
+/crm-main/crm-domain/.settings/
+/crm-main/crm-domain/target/
+/crm-main/crm-web/.classpath
+/crm-main/crm-web/target/
+/crm-main/crm-web/.settings/
+/crm-main/crm-web/.project
+/itheima-parent/.project
+/itheima-parent/.settings/
+/itheima-utils/target/
+/itheima-utils/.project
+/itheima-utils/.classpath
+/itheima-utils/.settings/

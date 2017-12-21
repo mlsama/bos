@@ -1,0 +1,10 @@
+{
+	"total": 100,
+	"rows" : [
+		{"id":1,"name":"冰箱","price":1000},
+		{"id":11,"name":"海尔冰箱","price":1200,"_parentId":1,"checked":true},
+		{"id":12,"name":"美的冰箱","price":1500,"_parentId":1,"checked":true},
+		{"id":2,"name":"电视","price":2000,"checked":true},
+		{"id":3,"name":"笔记本","price":4000}
+	]
+}

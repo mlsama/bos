@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx.xsd
+	http://www.springframework.org/schema/data/jpa 
+	http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+	
+	<!-- spring读取db.properties文件 -->
+	<!-- 
+	location:读取的文件路径
+	 -->
+	<context:property-placeholder location="classpath:jdbc.properties"/>
+	
+	<!-- 1.建立数据源 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="jdbcUrl" value="${jdbc.jdbcUrl}"/>
+		<property name="driverClass" value="${jdbc.driverClass}"/>
+		<property name="user" value="${jdbc.user}"/>
+		<property name="password" value="${jdbc.password}"/>
+	</bean>
+	
+	
+	
+	<!-- Spring整合JPA ,创建EntityManagerFactory-->
+	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<!-- 数据源 -->
+		<property name="dataSource" ref="dataSource"/>
+		<!-- 参数 ,提供具体ORM实现：Hibernate-->
+		<property name="jpaVendorAdapter">
+			<!-- 给JPA接口提供具体的ORM实现：hibernate -->
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+				<!-- 是否显示sql语句 -->
+				<property name="showSql" value="true"></property>
+				<!-- 是否需要自动创建表 -->
+				<!-- <property name="generateDdl" value="true"></property> -->
+				<!-- 数据库方言 -->
+				<property name="databasePlatform" value="org.hibernate.dialect.Oracle10gDialect"/>
+			</bean>
+		</property>
+		<!-- 注解扫描包 -->
+		<property name="packagesToScan">
+			<list>
+				<value>com.itheima.bos.domain</value>			
+			</list>
+		</property>
+	</bean>
+	
+	
+	<!-- 3.1 开启事务注解 -->
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	<!-- 3.2 事务管理器 -->
+	<!-- JPA事务管理器 -->
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory"/>
+	</bean>
+	
+	<!-- 4.开启IOC注解 -->
+	<context:component-scan base-package="com.itheima"/>
+	
+	<!-- spring data jpa扫描dao接口的包(用于生成dao接口的实现类) -->
+	<jpa:repositories base-package="com.itheima.bos.dao"/>
+	
+	<!-- 导入 -->
+	<import resource="classpath:applicationContext-webservice.xml"/>
+	<import resource="classpath:applicationContext-quartz.xml"/>
+	<import resource="classpath:applicationContext-shiro.xml"/>
+</beans>
