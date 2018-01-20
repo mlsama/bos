@@ -166,7 +166,8 @@
 					return value;
 				}
 			}
-		}] ];
+		}
+		] ];
 		
 	</script>
 	

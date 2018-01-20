@@ -25,7 +25,7 @@
 	<div class="datagrid-toolbar" style="height: 40px;">
 		<form id="searchForm" method="post">
 			标题:<input type="text" name="title; "/>
-			<a id="search" class="easyui-linkbutton" href="#" icon="icon-search">查询</a>
+			<a id="searchBtn" class="easyui-linkbutton" href="#" icon="icon-search">查询</a>
 		</form>
 	</div>
 

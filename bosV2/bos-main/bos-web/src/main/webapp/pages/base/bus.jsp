@@ -17,7 +17,7 @@
 <body>
 	<!-- 搜索 -->
 	<form id="searchForm" action="" method="post">
-		线路类型:<input type="text" name="way.wayType"/>
+		线路类型:<input type="text" name="wayType"/>
 		车牌号:<input type="text" name="busNum"/>
 		<input id="searchBtn" type="button" value="搜索"/> 
 	</form>

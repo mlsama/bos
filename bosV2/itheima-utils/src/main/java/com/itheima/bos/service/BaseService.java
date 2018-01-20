@@ -48,7 +48,7 @@ public interface BaseService<T> {
 	/**
 	 * 批量保存方法
 	 * 
-	 * @param model
+	 * @param list
 	 */
 	public void save(List<T> list);
 

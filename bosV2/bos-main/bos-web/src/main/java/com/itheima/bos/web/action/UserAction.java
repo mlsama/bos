@@ -55,9 +55,6 @@ public class UserAction extends BaseAction<User> {
 			public Predicate toPredicate(Root<User> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
 				// 根据页面传递的参数进行组合条件查询
 				List<Predicate> preList = new ArrayList<Predicate>();
-
-				
-
 				Predicate[] preArray = new Predicate[preList.size()];
 				return cb.and(preList.toArray(preArray));
 			}
@@ -208,8 +205,6 @@ public class UserAction extends BaseAction<User> {
 	@Action("save")
 	public String save() throws Exception {
 		//使用shiro对密码进行加盐
-		
-		
 		User user = this.getModel();
 		String password = user.getPassword();
 		
@@ -219,9 +214,7 @@ public class UserAction extends BaseAction<User> {
 		 * 参数三：散列次数(使用盐运算几次)
 		 */
 		Md5Hash hash = new Md5Hash(password,user.getUsername(),3);
-		
 		user.setPassword(hash.toString());
-		
 		return super.save();
 	}
 }

@@ -88,7 +88,11 @@
 		
 		//当前模型的列属性
 		var columns = [[
-					     {field:"id",title:"编号",width:100},     
+					     {field : 'id',
+                             title : '编号',
+                             width : 80,
+                             align : 'center',
+                             checkbox:true},
 					     {field:"name",title:"收派标准名称",width:200},     
 					     {field:"minWeight",title:"最小重量",width:100},     
 					     {field:"maxWeight",title:"最大重量",width:100},     
