@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>com.itheima</groupId>
 		<artifactId>bos-main</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>1.0.0</version>
 	</parent>
 	<artifactId>bos-web</artifactId>
 	<packaging>war</packaging>
@@ -12,14 +12,14 @@
 		<dependency>
 			<groupId>com.itheima</groupId>
 			<artifactId>bos-service</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>1.0.0</version>
 		</dependency>
 
 		<!-- 导入crm-domain -->
 		<dependency>
 			<groupId>com.itheima</groupId>
 			<artifactId>crm-domain</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>1.0.0</version>
 		</dependency>
 
 		<dependency>
