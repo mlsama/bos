@@ -4,14 +4,14 @@
 	<parent>
 		<groupId>com.itheima</groupId>
 		<artifactId>bos-main</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>1.0.0</version>
 	</parent>
 	<artifactId>bos-domain</artifactId>
 	<dependencies>
 		<dependency>
 			<groupId>com.itheima</groupId>
 			<artifactId>itheima-utils</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -32,7 +32,7 @@
 		<dependency>
 			<groupId>com.itheima</groupId>
 			<artifactId>crm-domain</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>1.0.0</version>
 		</dependency>
 	</dependencies>
 

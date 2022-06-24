@@ -3,14 +3,14 @@
   <parent>
     <groupId>com.itheima</groupId>
     <artifactId>bos-main</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
   </parent>
   <artifactId>bos-dao</artifactId>
   <dependencies>
   	<dependency>
   		<groupId>com.itheima</groupId>
   		<artifactId>bos-domain</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
+  		<version>1.0.0</version>
   	</dependency>
   	<dependency>
   		<groupId>com.oracle</groupId>

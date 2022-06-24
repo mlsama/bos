@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>com.itheima</groupId>
 		<artifactId>itheima-parent</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>1.0.0</version>
 	</parent>
 
 	<artifactId>bos_fore</artifactId>
@@ -81,12 +81,12 @@
 		<dependency>
 			<groupId>com.itheima</groupId>
 			<artifactId>itheima-utils</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.itheima</groupId>
 			<artifactId>crm-domain</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>1.0.0</version>
 		</dependency>
 
 		<!-- cxf：jax-rs -->
@@ -130,7 +130,7 @@
 		<dependency>
 			<groupId>com.itheima</groupId>
 			<artifactId>bos-domain</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>1.0.0</version>
 		</dependency>
 	</dependencies>
 

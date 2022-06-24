@@ -22,7 +22,6 @@ public class ExcelConvertUtils {
 				Date date = HSSFDateUtil.getJavaDate(cell.getNumericCellValue());
 				SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 				value = format.format(date);
-				;
 			} else {// 纯数字
 				BigDecimal big = new BigDecimal(cell.getNumericCellValue());
 				value = big.toString();

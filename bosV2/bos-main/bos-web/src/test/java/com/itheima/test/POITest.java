@@ -73,7 +73,7 @@ public class POITest {
 			4）读取列（Cell）
 		 */
 		//1）读取工作簿（WorkBook）
-		HSSFWorkbook wb = new HSSFWorkbook(new FileInputStream("E:\\区域测试数据.xls"));
+		HSSFWorkbook wb = new HSSFWorkbook(new FileInputStream("E:\\area.xls"));
 		
 		//2）读取工作单（Sheet）
 		HSSFSheet sheet = wb.getSheetAt(0);

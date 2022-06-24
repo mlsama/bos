@@ -3,9 +3,10 @@
   <parent>
     <groupId>com.itheima</groupId>
     <artifactId>itheima-parent</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
   </parent>
   <artifactId>crm-main</artifactId>
+	<version>1.0.0</version>
   <packaging>pom</packaging>
   <modules>
   	<module>crm-domain</module>
